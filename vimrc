@@ -71,3 +71,6 @@ let g:pymode_lint_cwindow = 0
 " Nginx syntax highlight
 au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx 
 au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx 
+
+" Sass-syntax
+au BufRead,BufNewFile *.scss set filetype=scss
