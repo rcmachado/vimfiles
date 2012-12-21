@@ -22,3 +22,6 @@
 [submodule "bundle/mako"]
 	path = bundle/mako
 	url = git://github.com/vim-scripts/mako.vim.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = git://github.com/mattn/zencoding-vim.git
