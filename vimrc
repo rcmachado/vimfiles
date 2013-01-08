@@ -74,3 +74,6 @@ au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx
 
 " Sass-syntax
 au BufRead,BufNewFile *.scss set filetype=scss
+
+"jshint
+autocmd BufWritePost,FileWritePost *.js JSHint
