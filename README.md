@@ -24,6 +24,9 @@ Plugins & Themes
 * python-mode
 * vcl
 * vim-colors-solarized
+* jshint
+* scss-syntax
+* zencoding
 
 License
 -------
