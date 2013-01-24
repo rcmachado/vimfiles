@@ -40,7 +40,8 @@ set shiftwidth=4
 set expandtab
 
 " On Python draw a red line on column limit
-au FileType python set colorcolumn=79
+au FileType python,javascript set colorcolumn=79
+"au FileType javascript set colorcolumn=79
 
 " Plugin configuration
 "
@@ -58,6 +59,7 @@ call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$']
+map <leader>t <ESC>:NERDTreeToggle<CR>
 
 " Enable python folding
 let g:pymode_folding = 1
@@ -76,4 +78,4 @@ au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx
 au BufRead,BufNewFile *.scss set filetype=scss
 
 "jshint
-autocmd BufWritePost,FileWritePost *.js JSHint
+autocmd BufWritePost *.js JSHint
