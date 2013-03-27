@@ -25,3 +25,6 @@
 [submodule "bundle/zencoding"]
 	path = bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "bundle/gutter"]
+	path = bundle/gutter
+	url = git://github.com/airblade/vim-gitgutter.git
