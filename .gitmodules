@@ -28,3 +28,6 @@
 [submodule "bundle/gutter"]
 	path = bundle/gutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/css-pretty"]
+	path = bundle/css-pretty
+	url = git://github.com/vim-scripts/Css-Pretty.git
