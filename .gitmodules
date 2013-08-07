@@ -31,3 +31,6 @@
 [submodule "bundle/css-pretty"]
 	path = bundle/css-pretty
 	url = git://github.com/vim-scripts/Css-Pretty.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git://github.com/mattn/emmet-vim.git
