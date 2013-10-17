@@ -16,9 +16,6 @@
 [submodule "bundle/scss-syntax"]
 	path = bundle/scss-syntax
 	url = git://github.com/cakebaker/scss-syntax.vim.git
-[submodule "bundle/jshint"]
-	path = bundle/jshint
-	url = git://github.com/walm/jshint.vim.git
 [submodule "bundle/mako"]
 	path = bundle/mako
 	url = git://github.com/vim-scripts/mako.vim.git
