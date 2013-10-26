@@ -40,7 +40,7 @@ set shiftwidth=4
 set expandtab
 
 " On Python draw a red line on column limit
-au FileType python,javascript set colorcolumn=79
+au FileType python,javascript,php set colorcolumn=79
 "au FileType javascript set colorcolumn=79
 
 " Plugin configuration
