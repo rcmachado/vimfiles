@@ -52,7 +52,7 @@ au FileType python,javascript,php set colorcolumn=79
 " Always show status line
 set laststatus=2
 " File has trailing whitespaces
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " NERDTree
 " https://github.com/scrooloose/nerdtree
