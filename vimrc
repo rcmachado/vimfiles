@@ -41,7 +41,11 @@ set expandtab
 
 " On Python draw a red line on column limit
 au FileType python,javascript,php set colorcolumn=79
-"au FileType javascript set colorcolumn=79
+
+au FileType puppet set tabstop=2
+au FileType puppet set softtabstop=2
+au FileType puppet set shiftwidth=2
+au FileType puppet set expandtab
 
 " Plugin configuration
 "
