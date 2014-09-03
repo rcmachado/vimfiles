@@ -48,6 +48,7 @@ Other plugins include:
 * [fugitive][]
 * [powerline][]
 * [csv][]
+* [parkr/vim-jekyll][]
 
 License
 -------
@@ -75,3 +76,4 @@ what you can do.
 [fugitive]: git@github.com:tpope/vim-fugitive
 [powerline]: git@github.com:Lokaltog/powerline
 [csv]: https://github.com/chrisbra/csv.vim
+[parkr/vim-jekyll]: https://github.com/parkr/vim-jekyll

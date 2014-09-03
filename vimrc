@@ -83,5 +83,8 @@ au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx
 " Sass-syntax
 au BufRead,BufNewFile *.scss set filetype=scss
 
+" Jekyll
+let g:jekyll_post_extension = '.md'
+
 " Reformat json using python
 au FileType json setlocal equalprg=python\ -m\ json.tool

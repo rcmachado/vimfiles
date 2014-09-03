@@ -55,3 +55,6 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim
+[submodule "bundle/jekyll"]
+	path = bundle/jekyll
+	url = git@github.com:parkr/vim-jekyll.git
