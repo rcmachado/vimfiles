@@ -88,3 +88,7 @@ let g:jekyll_post_extension = '.md'
 
 " Reformat json using python
 au FileType json setlocal equalprg=python\ -m\ json.tool
+
+" Autocomplete
+set omnifunc=syntaxcomplete#Complete
+set completefunc=emoji#complete
