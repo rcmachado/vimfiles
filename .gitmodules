@@ -1,6 +1,3 @@
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/nginx-syntax-highlight"]
 	path = bundle/nginx-syntax-highlight
 	url = git://github.com/vim-scripts/nginx.vim.git
@@ -61,3 +58,6 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = git@github.com:fatih/vim-go.git
+[submodule "bundle/vim-vividchalk"]
+	path = bundle/vim-vividchalk
+	url = git@github.com:tpope/vim-vividchalk.git

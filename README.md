@@ -16,9 +16,9 @@ Instalation
 Plugins & Themes
 ================
 
-This uses the [Solarized][] color scheme, implemented by:
+This uses the Vividchalk color scheme, by Tim Pope:
 
-  * [altercation/vim-colors-solarized][]
+* [tpope/vim-vividchalk][]
 
 Other plugins include:
 
@@ -58,7 +58,6 @@ details). But each plugin has its own license, so check each one to see
 what you can do.
 
 [vim-markdown]: https://github.com/plasticboy/vim-markdown
-[altercation/vim-colors-solarized]: https://github.com/altercation/vim-colors-solarized
 [nginx-syntax-highlight]: https://github.com/vim-scripts/nginx.vim
 [python-mode]: https://github.com/klen/python-mode
 [nerdtree]: https://github.com/scrooloose/nerdtree
@@ -77,3 +76,4 @@ what you can do.
 [powerline]: git@github.com:Lokaltog/powerline
 [csv]: https://github.com/chrisbra/csv.vim
 [parkr/vim-jekyll]: https://github.com/parkr/vim-jekyll
+[tpope/vim-vividchalk]: https://github.com/tpope/vim-vividchalk
