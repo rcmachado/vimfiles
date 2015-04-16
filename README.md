@@ -8,8 +8,10 @@ Instalation
 ===========
 
     $ git clone https://github.com/rcmachado/vimfiles
+    $ cd vimfiles
     $ git submodule init
     $ git submodule update
+    $ cd ..
     $ ln -s vimfiles ~/.vim
     $ ln -s vimfiles/vimrc ~/.vimrc
 
