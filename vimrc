@@ -27,6 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'parkr/vim-jekyll'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-vividchalk'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
