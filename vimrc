@@ -32,9 +32,6 @@ Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
-" Enable Pathogen
-call pathogen#infect()
-
 set encoding=utf-8
 " Window background
 set background=dark
