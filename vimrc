@@ -1,5 +1,35 @@
 " Disable vi compatibility mode
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/nginx.vim'
+Plugin 'klen/python-mode'
+Plugin 'scrooloose/nerdtree'
+Plugin 'smerrill/vcl-vim-plugin'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-scripts/mako.vim'
+Plugin 'mattn/zencoding-vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/Css-Pretty'
+Plugin 'mattn/emmet-vim'
+Plugin 'groenewege/vim-less'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'claco/jasmine.vim'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'Lokaltog/powerline'
+Plugin 'chrisbra/csv.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'parkr/vim-jekyll'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-vividchalk'
+
+call vundle#end()
+filetype plugin indent on
 
 " Enable Pathogen
 call pathogen#infect()
@@ -74,7 +104,9 @@ let g:pymode_folding = 1
 let g:pymode_utils_whitespaces = 0
 
 " Don't open error window automatically
-let g:pymode_lint_cwindow = 0
+" let g:pymode_lint_cwindow = 0
+let g:pymode_lint = 1
+let g:pymode_lint_write = 0
 
 " Nginx syntax highlight
 au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx 
@@ -92,3 +124,14 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 " Autocomplete
 set omnifunc=syntaxcomplete#Complete
 set completefunc=emoji#complete
+
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = "$HOME" . '/.pyenv/versions/3.4.3/bin/python3' 
