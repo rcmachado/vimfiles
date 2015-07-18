@@ -33,6 +33,7 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
