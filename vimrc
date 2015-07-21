@@ -34,6 +34,7 @@ Plugin 'tpope/vim-vividchalk'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'markcornick/vim-bats'
 
 call vundle#end()
 filetype plugin indent on
