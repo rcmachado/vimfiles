@@ -111,7 +111,7 @@ let g:pymode_utils_whitespaces = 0
 
 " Don't open error window automatically
 " let g:pymode_lint_cwindow = 0
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_write = 0
 
 " Nginx syntax highlight
