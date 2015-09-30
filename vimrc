@@ -100,7 +100,7 @@ set laststatus=2
 " https://github.com/scrooloose/nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$']
+let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__']
 map <leader>t <ESC>:NERDTreeToggle<CR>
 
 " Enable python folding
@@ -140,4 +140,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = "$HOME" . '/.pyenv/versions/3.4.3/bin/python3' 
+let g:syntastic_python_python_exec = "$HOME" . '/.pyenv/versions/3.5.0/bin/python3'
+let g:syntastic_python_checkers = ['flake8']
