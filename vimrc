@@ -36,6 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'markcornick/vim-bats'
+Plugin 'vim-scripts/django.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -120,6 +121,9 @@ au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx
 
 " Sass-syntax
 au BufRead,BufNewFile *.scss set filetype=scss
+
+" Django syntax
+au BufRead,BufNewFile /Users/rcmachado/Developer/**/templates/**/*.html set ft=htmldjango
 
 " Jekyll
 let g:jekyll_post_extension = '.md'
