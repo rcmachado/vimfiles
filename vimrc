@@ -79,7 +79,7 @@ set expandtab
 " On some files, draw a red line on column limit
 au FileType python,javascript,php set colorcolumn=79
 " For 'text' files (like Markdown) let's use a more confortable limit
-au FileType mkd set colorcolumn=72
+au FileType mkd,markdown set colorcolumn=72
 
 au FileType puppet set tabstop=2
 au FileType puppet set softtabstop=2
