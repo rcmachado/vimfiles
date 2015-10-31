@@ -37,6 +37,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'markcornick/vim-bats'
 Plugin 'vim-scripts/django.vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 call vundle#end()
 filetype plugin indent on
