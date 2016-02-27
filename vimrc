@@ -117,6 +117,10 @@ let g:pymode_utils_whitespaces = 0
 let g:pymode_lint = 0
 let g:pymode_lint_write = 0
 
+" Disable rope / autocomplete to avoid vim freeze
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope = 0
+
 " Nginx syntax highlight
 au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx 
 au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx 
