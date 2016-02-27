@@ -26,7 +26,6 @@ Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'claco/jasmine.vim'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Lokaltog/powerline'
 Plugin 'chrisbra/csv.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'parkr/vim-jekyll'
@@ -134,15 +133,7 @@ let g:jekyll_post_extension = '.md'
 " Reformat json using python
 au FileType json setlocal equalprg=python\ -m\ json.tool
 
-" Autocomplete
-"set omnifunc=syntaxcomplete#Complete
-"set completefunc=emoji#complete
-
 " Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
