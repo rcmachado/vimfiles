@@ -54,7 +54,7 @@ syntax on
 filetype plugin indent on
 
 " Color scheme
-if isdirectory(expand("~/.vim/bundle/vividchalk.vim/.git"))
+if isdirectory(expand("~/.vim/bundle/vim-vividchalk/.git"))
     colorscheme vividchalk
 endif
 
