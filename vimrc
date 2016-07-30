@@ -47,6 +47,7 @@ set encoding=utf-8
 set background=dark
 set hlsearch
 set incsearch
+set clipboard+=unnamed " Yanks go on clipboard instead
 " Show line numbers
 set number
 " Enable syntax highglight
