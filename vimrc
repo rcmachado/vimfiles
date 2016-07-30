@@ -54,7 +54,9 @@ syntax on
 filetype plugin indent on
 
 " Color scheme
-colorscheme vividchalk
+if isdirectory(expand("~/.vim/bundle/vividchalk.vim/.git"))
+    colorscheme vividchalk
+endif
 
 " Emulate TextMate's shift left/right key commands
 nmap <D-[> <<
