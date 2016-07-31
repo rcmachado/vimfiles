@@ -44,23 +44,30 @@ call vundle#end()
 " }}}
 
 set encoding=utf-8
-" Window background
-set background=dark
 set clipboard+=unnamed " Yanks go on clipboard instead
 
-" Match and search
+" Match and search {{{
 set hlsearch    " highlight search
 set ignorecase  " Do case in sensitive matching with
 set smartcase   " be sensitive when there's a capital letter
 set incsearch
+" }}}
 
 " Formatting {{{
-set backspace=indent,eol,start
 syntax on
 filetype plugin indent on
+
+set backspace=indent,eol,start
+
+" Default tab settings
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 " }}}
 
 " Visual "{{{
+set background=dark
 set number " Show line numbers
 set showmatch " Show matching brackets
 set noerrorbells " No noise
@@ -69,6 +76,12 @@ set foldenable " Turn on folding
 set foldmethod=marker " Fold on the marker
 " set foldlevel=1 " Don't autofold anything (but I can still fold manually)
 set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+
+" Show invisible caracters
+set list
+set listchars=tab:▸\ ,eol:¬
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
 " First run: only load color scheme if plugin was already downloaded
 if isdirectory(expand("~/.vim/bundle/vim-vividchalk/.git"))
@@ -85,18 +98,6 @@ vmap <D-]> >gv
 " Got to module/class/function definition
 map <leader>j :RopeGotoDefinition<CR>
 
-" Show invisible caracters
-set list
-set listchars=tab:▸\ ,eol:¬
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
-" Default tab settings
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
 " On some files, draw a red line on column limit
 au FileType python,javascript,php set colorcolumn=79
 " For 'text' files (like Markdown) let's use a more confortable limit
@@ -112,19 +113,15 @@ set shell=/usr/local/bin/zsh
 " Plugin configuration
 "
 
-" Powerline plugin
-" https://github.com/Lokaltog/vim-powerline
-"
 " Always show status line
 set laststatus=2
 " File has trailing whitespaces
 "call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " NERDTree
-" https://github.com/scrooloose/nerdtree
+let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__']
 autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__']
 map <leader>t <ESC>:NERDTreeToggle<CR>
 
 " Enable python folding
