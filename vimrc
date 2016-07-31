@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -123,6 +124,12 @@ let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__']
 autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <leader>t <ESC>:NERDTreeToggle<CR>
+
+" NERD Commenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 " Enable python folding
 let g:pymode_folding = 1
