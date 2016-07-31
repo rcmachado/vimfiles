@@ -6,6 +6,7 @@ if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
     !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 endif
 
+" Plugins {{{
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -40,24 +41,40 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'vim-scripts/groovy.vim'
 
 call vundle#end()
-filetype plugin indent on
+" }}}
 
 set encoding=utf-8
 " Window background
 set background=dark
-set hlsearch
-set incsearch
 set clipboard+=unnamed " Yanks go on clipboard instead
-" Show line numbers
-set number
-" Enable syntax highglight
+
+" Match and search
+set hlsearch    " highlight search
+set ignorecase  " Do case in sensitive matching with
+set smartcase   " be sensitive when there's a capital letter
+set incsearch
+
+" Formatting {{{
+set backspace=indent,eol,start
 syntax on
 filetype plugin indent on
+" }}}
 
-" Color scheme
+" Visual "{{{
+set number " Show line numbers
+set showmatch " Show matching brackets
+set noerrorbells " No noise
+
+set foldenable " Turn on folding
+set foldmethod=marker " Fold on the marker
+" set foldlevel=1 " Don't autofold anything (but I can still fold manually)
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+
+" First run: only load color scheme if plugin was already downloaded
 if isdirectory(expand("~/.vim/bundle/vim-vividchalk/.git"))
     colorscheme vividchalk
 endif
+" "}}}
 
 " Emulate TextMate's shift left/right key commands
 nmap <D-[> <<
