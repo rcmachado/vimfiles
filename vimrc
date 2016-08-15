@@ -170,5 +170,19 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = "$HOME" . '/.pyenv/versions/3.5.1/bin/python3'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_sh_shellcheck_args = "--external-sources --exclude=SC2148"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
