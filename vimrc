@@ -40,6 +40,9 @@ Plugin 'markcornick/vim-bats'
 Plugin 'vim-scripts/django.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'vim-scripts/groovy.vim'
+Plugin 'tfnico/vim-gradle'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 " }}}
