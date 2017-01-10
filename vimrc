@@ -43,6 +43,7 @@ Plugin 'vim-scripts/groovy.vim'
 Plugin 'tfnico/vim-gradle'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'IN3D/vim-raml'
 
 call vundle#end()
 " }}}
