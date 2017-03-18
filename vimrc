@@ -44,6 +44,7 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'IN3D/vim-raml'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 " }}}
