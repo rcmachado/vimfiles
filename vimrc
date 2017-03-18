@@ -80,6 +80,7 @@ set noerrorbells " No noise
 
 set foldenable " Turn on folding
 set foldmethod=marker " Fold on the marker
+set foldlevel=0
 " set foldlevel=1 " Don't autofold anything (but I can still fold manually)
 set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
 
