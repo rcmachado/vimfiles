@@ -192,3 +192,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+
+" vim-terraform
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1
