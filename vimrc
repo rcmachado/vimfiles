@@ -18,13 +18,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'vim-scripts/mako.vim'
 Plugin 'mattn/zencoding-vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/Css-Pretty'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
-Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'claco/jasmine.vim'
 Plugin 'tpope/vim-fugitive'
@@ -109,11 +107,6 @@ map <leader>j :RopeGotoDefinition<CR>
 au FileType python,javascript,php set colorcolumn=79
 " For 'text' files (like Markdown) let's use a more confortable limit
 au FileType mkd,markdown set colorcolumn=72
-
-au FileType puppet set tabstop=2
-au FileType puppet set softtabstop=2
-au FileType puppet set shiftwidth=2
-au FileType puppet set expandtab
 
 set shell=/usr/local/bin/zsh
 
