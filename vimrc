@@ -110,7 +110,7 @@ map <leader>j :RopeGotoDefinition<CR>
 " On some files, draw a red line on column limit
 au FileType python,javascript,php set colorcolumn=79
 " For 'text' files (like Markdown) let's use a more confortable limit
-au FileType mkd,markdown set colorcolumn=72
+au FileType rst,mkd,markdown set colorcolumn=72
 
 set shell=/usr/local/bin/zsh
 
