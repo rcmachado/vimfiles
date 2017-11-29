@@ -29,6 +29,7 @@ Plugin 'Shougo/neocomplete.vim'
 
 " Language
 Plugin 'vim-scripts/nginx.vim'
+Plugin 'klen/python-mode'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/Css-Pretty'
