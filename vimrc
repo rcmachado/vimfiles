@@ -13,7 +13,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/zencoding-vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
@@ -26,6 +26,7 @@ Plugin 'tpope/vim-vividchalk'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'w0rp/ale'
 
 " Language
 Plugin 'vim-scripts/nginx.vim'
@@ -164,6 +165,12 @@ let g:jekyll_post_extension = '.md'
 
 " Reformat json using python
 au FileType json setlocal equalprg=python\ -m\ json.tool
+
+" Ale
+let g:ale_sign_error = '💩'
+let g:ale_sign_warning = '⚠️'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
