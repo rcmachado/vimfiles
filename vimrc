@@ -11,24 +11,24 @@ set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+" Editor configuration
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'vim-syntastic/syntastic'
-Plugin 'mattn/zencoding-vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mattn/emmet-vim'
-Plugin 'groenewege/vim-less'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'chrisbra/csv.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'w0rp/ale'
+Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'w0rp/ale'
 
-" Language
+" Git/GitHub support
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+
+" Language/syntax support
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'klen/python-mode'
 Plugin 'smerrill/vcl-vim-plugin'
@@ -38,11 +38,12 @@ Plugin 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-scripts/groovy.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'Shutnik/jshint2.vim'
 Plugin 'IN3D/vim-raml'
 Plugin 'hashivim/vim-terraform'
+Plugin 'chrisbra/csv.vim'
 
 " Framework specific
-Plugin 'claco/jasmine.vim'
 Plugin 'parkr/vim-jekyll'
 Plugin 'markcornick/vim-bats'
 Plugin 'vim-scripts/django.vim'
