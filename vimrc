@@ -37,7 +37,9 @@ Plugin 'vim-scripts/Css-Pretty'
 Plugin 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-scripts/groovy.vim'
+Plugin 'elzr/vim-json', {'for': 'json'}
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'IN3D/vim-raml'
 Plugin 'hashivim/vim-terraform'
@@ -76,17 +78,16 @@ set shiftwidth=4
 set expandtab
 " }}}
 
-" Visual "{{{
+" Visual {{{
 set background=dark
-set number " Show line numbers
+set number
 set showmatch " Show matching brackets
 set noerrorbells " No noise
 
 set foldenable " Turn on folding
 set foldmethod=marker " Fold on the marker
 set foldlevel=0
-" set foldlevel=1 " Don't autofold anything (but I can still fold manually)
-set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
 
 " Show invisible caracters
 set list
@@ -98,19 +99,13 @@ highlight SpecialKey guifg=#4a4a59
 if isdirectory(expand("~/.vim/bundle/vim-vividchalk/.git"))
     colorscheme vividchalk
 endif
-" "}}}
-
-" Emulate TextMate's shift left/right key commands
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+" }}}
 
 " Got to module/class/function definition
 map <leader>j :RopeGotoDefinition<CR>
 
-" On some files, draw a red line on column limit
-au FileType python,javascript,php set colorcolumn=79
+" On some files, draw a line on column limit
+au FileType python,javascript,go set colorcolumn=79
 " For 'text' files (like Markdown) let's use a more confortable limit
 au FileType rst,mkd,markdown set colorcolumn=72
 
@@ -119,41 +114,41 @@ set shell=/usr/local/bin/zsh
 " Plugin configuration
 "
 
-" Always show status line
-set laststatus=2
-" File has trailing whitespaces
-"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+" Airline {{{
+let g:airline_section_y=''
+let g:airline_section_z = airline#section#create(['linenr', ':%3v'])
+" }}}
 
-" NERDTree
-let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__']
+" NERDTree {{{
+let NERDTreeIgnore=['\.o$', '\~$', '\.py[co]$', '__pycache__', '[\._]*\.s[a-w][a-z]$', '[\._]s[a-w][a-z]$']
 autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <leader>t <ESC>:NERDTreeToggle<CR>
+" }}}
 
-" NERD Commenter
+" NERD Commenter {{{
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+" }}}
 
-" Enable python folding
-let g:pymode_folding = 1
-
-" Don't autoremove unused whitespaces
-let g:pymode_utils_whitespaces = 0
-
+" Pymode {{{
+let g:pymode = 1
+let g:pymode_folding = 0 " Disable python folding (make vim slow)
+let g:pymode_utils_whitespaces = 0 " Don't autoremove unused whitespaces
 " Don't open error window automatically
 " let g:pymode_lint_cwindow = 0
 let g:pymode_lint = 0
-let g:pymode_lint_write = 0
-
+let g:pymode_lint_on_write = 0
 " Disable rope / autocomplete to avoid vim freeze
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope = 0
+" }}}
 
 " Nginx syntax highlight
-au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx 
-au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx 
+au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx
+au BufRead,BufNewFile /Users/rcmachado/Developer/nginx-conf/* set ft=nginx
 
 " Sass-syntax
 au BufRead,BufNewFile *.scss set filetype=scss
@@ -167,27 +162,19 @@ let g:jekyll_post_extension = '.md'
 " Reformat json using python
 au FileType json setlocal equalprg=python\ -m\ json.tool
 
-" Ale
+" Ale {{{
+let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '💩'
 let g:ale_sign_warning = '⚠️'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
+" }}}
 
-" Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = "$HOME" . '/.pyenv/versions/3.6.1/bin/python3'
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = "$HOME" . '/.pyenv/versions/3.6.1/bin/flake8'
-let g:syntastic_sh_shellcheck_args = "--external-sources --exclude=SC2148"
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
+" EditorConfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" }}}
 
-" vim-go
+" Go {{{
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -198,7 +185,9 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+" }}}
 
-" vim-terraform
+" Terraform {{{
 let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
+" }}}
