@@ -28,9 +28,13 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 
-" Language/syntax support
+" Python support
+Plugin 'python-mode/python-mode'
+Plugin 'python/black'
+Plugin 'integralist/vim-mypy'
+
+" Other language/syntax support
 Plugin 'vim-scripts/nginx.vim'
-Plugin 'klen/python-mode'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/Css-Pretty'
@@ -47,10 +51,10 @@ Plugin 'chrisbra/csv.vim'
 
 " Framework specific
 Plugin 'parkr/vim-jekyll'
-Plugin 'markcornick/vim-bats'
 Plugin 'vim-scripts/django.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'tfnico/vim-gradle'
+Plugin 'mfukar/robotframework-vim'
 
 call vundle#end()
 " }}}
@@ -144,7 +148,11 @@ let g:pymode_lint_on_write = 0
 " Disable rope / autocomplete to avoid vim freeze
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope = 0
+let g:pymode_python = 'python3'
 " }}}
+
+" Dockerfile syntax highlight
+au BufRead,BufNewFile Dockerfile.* set ft=dockerfile
 
 " Nginx syntax highlight
 au BufRead,BufNewFile /usr/local/etc/nginx/* set ft=nginx
@@ -185,6 +193,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+let g:go_fold_enable = ["block", "import", "varconst", "package_comment"]
 " }}}
 
 " Terraform {{{
